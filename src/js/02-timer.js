@@ -14,7 +14,6 @@ const refs = {
 };
 refs.startBtn.disabled = true;
 let selectedDate;
-let eventOccured = false;
 
 const options = {
   enableTime: true,
