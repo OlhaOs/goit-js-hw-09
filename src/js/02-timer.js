@@ -1,5 +1,6 @@
 import flatpickr from 'flatpickr';
 import 'flatpickr/dist/flatpickr.min.css';
+import { Notify } from 'notiflix/build/notiflix-notify-aio';
 
 require('flatpickr/dist/themes/dark.css');
 
@@ -37,7 +38,7 @@ refs.startBtn.addEventListener('click', onStartTbnClick);
 function isDatePickedInFuture(dates, dateStr) {
   const deltaTime = dates[0].getTime() - Date.now();
   if (deltaTime < 0) {
-    alert('You picked the date in the past ' + dateStr);
+    Notify.warning('You picked the date in the past ' + dateStr);
   } else {
     refs.startBtn.disabled = false;
   }
