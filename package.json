@@ -6,7 +6,13 @@
   "main": "index.js",
   "scripts": {
     "dev": "parcel src/*.html",
-    "build": "parcel build src/*.html --public-url /goit-js-hw-09/"
+    "build": "parcel build src/*.html --public-url /goit-js-hw-09/",
+     "deploy": "gh-pages -d dist",
+    "predeploy": "npm run build"
+  },
+    "repository": {
+    "type": "git",
+    "url": "git+https://github.com/OlhaOs/goit-js-hw-09.git"
   },
   "keywords": [],
   "author": "",
